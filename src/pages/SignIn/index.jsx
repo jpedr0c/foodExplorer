@@ -12,12 +12,15 @@ export default function SignIn() {
       <Form>
         <h1>Faça o login</h1>
         <Input
-          placeholder="Exemplo: exemplo@exemplo.com.br"
+          id='Email'
           type="email"
+          placeholder="Exemplo: exemplo@exemplo.com.br"
         />
+
         <Input
-          placeholder="No mínimo 6 caracteres"
+          id="Senha"
           type="password"
+          placeholder="No mínimo 6 caracteres"
         />
         <Button title="Entrar" />
         <a href="">Criar uma conta</a>
