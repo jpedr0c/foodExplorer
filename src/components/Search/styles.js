@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
-  min-width: 40rem;
+  min-width: 62rem;
   height: 5.6rem;
   display: flex;
   align-items: center;
@@ -10,11 +9,16 @@ export const Container = styled.div`
   padding: 1.4rem 3rem;
   border-radius: 0.8rem;
   gap: 1.4rem;
+
+  > svg {
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
+  }
   
   > input {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
     border: 0;
 
     &:placeholder {
