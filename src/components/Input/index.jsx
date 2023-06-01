@@ -1,9 +1,9 @@
 import { Container } from './styles';
 
-export function Input({id, ...rest}){
+export function Input({id, labelContent, ...rest}){
   return (
     <Container>
-      <label htmlFor={id}>{id}</label>
+      <label htmlFor={id}>{labelContent}</label>
       <input {...rest} />
     </Container>
   )
