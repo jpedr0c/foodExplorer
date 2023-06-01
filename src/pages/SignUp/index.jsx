@@ -12,19 +12,22 @@ export default function SignIn() {
       <Form>
         <h1>Crie sua conta</h1>
         <Input
-          id='Nome'
+          id='name'
+          labelContent="Seu nome"
           type="text"
           placeholder="Exemplo: Maria da Silva"
         />
 
         <Input
-          id='Email'
+          id='email'
+          labelContent="Email"
           type="email"
           placeholder="Exemplo: exemplo@exemplo.com.br"
         />
 
         <Input
-          id="Senha"
+          id="password"
+          labelContent="Senha"
           type="password"
           placeholder="No mínimo 6 caracteres"
         />
