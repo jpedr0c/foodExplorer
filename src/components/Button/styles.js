@@ -4,6 +4,10 @@ export const Container = styled.button`
   width: 100%;
   height: 5.6rem;
   line-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
   background: ${({ theme }) => theme.COLORS.TOMATO_100};
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   border: 0;
