@@ -18,6 +18,16 @@ export function Header(){
       {/* TODO: Colocar esses dois links para a milha extra */}
       {/* <a href="">Meus favoritos</a>
       <a href="">Histórico de pedidos</a> */}
+      {/* <nav>
+        <ul>
+          <li><a href="">Meus favoritos</a></li>
+          <li><a href="">Histórico de pedidos</a></li>
+          <li><Button 
+          icon={IoReceipt}
+          title="Pedidos (0)"
+        /></li>
+        </ul>
+      </nav> */}
       <Button 
         icon={IoReceipt}
         title="Pedidos (0)"
