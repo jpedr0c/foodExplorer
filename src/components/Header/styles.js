@@ -6,10 +6,11 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
   padding: 2.4rem 12.3rem;
-  gap: 3.2rem;
+  gap: 4rem;
 
   > a > img {
     max-width: 18.6rem;

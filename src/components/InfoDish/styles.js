@@ -7,19 +7,19 @@ export const Container = styled.main`
   flex-direction: column;
   align-items: center;
   background-color: ${({ theme }) => theme.COLORS.DARK_400};
-  padding: 2.4rem;
 
   .box{
     min-width: 112rem;
   }
 `;
 
-export const Description = styled.div`
-  max-width: 112rem;
+export const DishBox = styled.div`
+  max-width: 85rem;
   height: 56vh;
-  /* max-height: 100rem; */
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
   gap: 4.7rem;
 
   > img {

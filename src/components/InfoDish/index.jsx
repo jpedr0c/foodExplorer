@@ -1,18 +1,22 @@
-import { Container, Description, Information } from './styles';
-import { BackButton } from '../BackButton';
+import { Container, DishBox, Informations } from './styles';
+import { Button } from '../Button';
+import { AddPlate } from '../AddPlate';
 
 export function InfoDish({data, ...rest}){
   return (
     <Container {...rest}>
       <div className="box">
-        <BackButton />
-        <Description>
-          <img src="../../../images/Mask group-1.png" alt="Imagem de um prato" />
-          <Information>
+        <DishBox>
+          <img src="../../../images/Mask group.png" alt="Imagem de um prato" />
+          <Informations>
             <h1>{data.title}</h1>
             <p>{data.info}</p>
-          </Information>
-        </Description>
+            <AddPlate />
+            <Button 
+              title="incluir - R$ 25,00"
+            />
+          </Informations>
+        </DishBox>
       </div>
     </Container>
   )

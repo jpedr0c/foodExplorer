@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
-  width: 100%;
-  height: 5.6rem;
+  max-width: 20rem;
+  height: 4.8rem;
   line-height: 2.4rem;
+  padding: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;

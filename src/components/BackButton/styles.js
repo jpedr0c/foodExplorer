@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  /* max-width: 10.6rem; */
   max-height: 3.4rem;
+  padding: 5rem 0 3rem 7rem;
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.COLORS.DARK_400};
