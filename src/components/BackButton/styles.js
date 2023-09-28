@@ -4,8 +4,7 @@ export const Container = styled.button`
   display: flex;
   align-items: center;
   width: 100%;
-  margin-bottom: 1.6rem;
-  margin-left: 4rem;
+  margin: 2rem 0 2rem 4rem;
   border: none;
   background-color: transparent;
   font-family: "Poppins", sans-serif;
