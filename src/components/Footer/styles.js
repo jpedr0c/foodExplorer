@@ -6,6 +6,7 @@ export const Container = styled.footer`
   justify-content: space-between;
   width: 100%;
   padding: 2.4rem;
+  margin-top: 3.2rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
 
   > span {
