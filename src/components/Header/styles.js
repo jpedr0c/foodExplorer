@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ${({ $isadmin }) => $isadmin ? "start" : "space-between"};
   width: 100%;
-  /* height: 12rem; */
   padding: 2.4rem 2.5rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_700};
 
@@ -18,6 +17,7 @@ export const Container = styled.div`
 export const Logo = styled.a`
   display: flex;
   align-items: center;
+  margin: ${({ $isadmin }) => $isadmin ? "0" : "0 auto"};
   gap: .8rem;
 
   > img {

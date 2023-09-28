@@ -4,7 +4,9 @@ import { Container, Logo, Receipt } from "./styles";
 
 export function Header({ isAdmin = false }) {
   return(
-    <Container>
+    <Container
+      $isadmin={isAdmin}
+    >
       <FiMenu/>
       <Logo href="/">
           <img src="../../../src/assets/polygon.svg" alt="" />
@@ -13,10 +15,12 @@ export function Header({ isAdmin = false }) {
             { isAdmin && <span>admin</span>}
           </div>
       </Logo>
+      {!isAdmin && 
       <Receipt>
         <PiReceipt/>
         <span>0</span>
-      </Receipt>
+      </Receipt>}
+      
     </Container>
   );
 }
