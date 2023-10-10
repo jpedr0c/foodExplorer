@@ -1,20 +1,63 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
-export const Container = styled.div`
+export const Container = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: ${({ $isadmin }) => $isadmin ? "start" : "space-between"};
-  width: 100%;
+  /* justify-content: ${({ $isadmin }) => $isadmin ? "start" : "space-between"}; */
   padding: 2.4rem 2.5rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_700};
+`;
+
+export const Box = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  margin: 0 auto;
+
+  .desktop {
+    display: none;
+  }
+  
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    gap: 3rem;
+    
+    > button.desktop{
+      max-width: 18rem;
+    }
+
+    .desktop {
+      display: flex;
+    }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
+    gap: 5rem;
+  }
+`;
+
+export const Menu = styled.button`
+  background-color: transparent;
+  border: none;
 
   > svg {
-    width: 3.2rem;
-    height: 3.2rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    font-size: 3.2rem;
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}){
+    display: none;
   }
 `;
 
 export const Logo = styled.a`
+  width: 100%;
+  max-width: 17rem;
   display: flex;
   align-items: center;
   margin: ${({ $isadmin }) => $isadmin ? "0" : "0 auto"};
@@ -49,15 +92,31 @@ export const Logo = styled.a`
     }
   }
 
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}){
+    flex: 1;
+    margin: 0;
+  }
 `;
 
-export const Receipt = styled.div`
-  position: relative;
-  cursor: pointer;
+export const BtnSignOut = styled.button`
+  background: none;
+  border: none;
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
   > svg {
-    width: 3.2rem;
-    height: 3.2rem;
+    font-size: 3.2rem;
+  }
+`;
+
+export const Cart = styled.button`
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+  > svg {
+    font-size: 3.2rem;
   }
 
   > span {
@@ -72,4 +131,9 @@ export const Receipt = styled.div`
     font-weight: 500;
     text-align: center;
   }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    display: none;
+  }
+
 `;
