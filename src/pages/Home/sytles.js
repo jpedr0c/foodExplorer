@@ -13,7 +13,8 @@ export const Banner = styled.div`
   justify-content: center;
   gap: 2.5rem;
   padding: 2.5rem;
-  width: 85%;
+  width: 100%;
+  max-width: 1444px;
   height: 120px;
   margin: 4rem auto;
   background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
@@ -37,4 +38,10 @@ export const Banner = styled.div`
       font-size: 1.2rem;
     }
   }
+`;
+
+export const Box = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1444px;
 `;
