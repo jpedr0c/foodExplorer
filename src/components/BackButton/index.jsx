@@ -1,10 +1,10 @@
-import { FiChevronLeft } from "react-icons/fi"
+import { CaretLeft } from "@phosphor-icons/react";
 import { Container } from "./styles";
 
 export function BackButton() {
   return(
     <Container>
-      <FiChevronLeft/>
+      <CaretLeft/>
       voltar
     </Container>
   );
