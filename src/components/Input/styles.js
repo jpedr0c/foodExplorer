@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   width: 100%;
-
+  
   > label {
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
@@ -19,7 +20,12 @@ export const Container = styled.div`
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
     border: none;
+    padding: 1.6rem 1.4rem;
     border-radius: .8rem;
-    padding: 1.2rem 1.4rem;
+  
+    &::placeholder {
+      color: ${({ theme }) => theme.COLORS.LIGHT_500};
+      font-size: 1.6rem;
+    }
   }
 `;
