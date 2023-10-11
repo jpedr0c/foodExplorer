@@ -36,21 +36,24 @@ export function Home({ isAdmin = false }) {
             image: "../../../src/assets/salada_ravanello.png", 
             title: "Salada Ravanello", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "49,90"
+            price: "49,90",
+            isFavorite: "false"
           }}/>
           <PlateCard isAdmin={isAdmin} data={{
             id: "2", 
             image: "../../../src/assets/spaguetti_gambe.png", 
             title: "Spaguetti Gambe", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "79,90"
+            price: "79,90",
+            isFavorite: "false"
           }}/>
           <PlateCard isAdmin={isAdmin} data={{
             id: "3", 
             image: "../../../src/assets/torradas_parma.png", 
             title: "Torradas de Parma", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "25,90"
+            price: "25,90",
+            isFavorite: "false"
           }}/>
         </Dishes>
 
@@ -60,21 +63,24 @@ export function Home({ isAdmin = false }) {
             image: "../../../src/assets/salada_ravanello.png", 
             title: "Salada Ravanello", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "49,90"
+            price: "49,90",
+            isFavorite: "false"
           }}/>
           <PlateCard isAdmin={isAdmin} data={{
             id: "5", 
             image: "../../../src/assets/spaguetti_gambe.png", 
             title: "Spaguetti Gambe", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "79,90"
+            price: "79,90",
+            isFavorite: "false"
           }}/>
           <PlateCard isAdmin={isAdmin} data={{
             id: "6", 
             image: "../../../src/assets/torradas_parma.png", 
             title: "Torradas de Parma", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "25,90"
+            price: "25,90",
+            isFavorite: "false"
           }}/>
         </Dishes>
 
@@ -84,21 +90,24 @@ export function Home({ isAdmin = false }) {
             image: "../../../src/assets/expresso.png", 
             title: "Expresso", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "15,90"
+            price: "15,90",
+            isFavorite: "false"
           }}/>
           <PlateCard isAdmin={isAdmin} data={{
             id: "8", 
             image: "../../../src/assets/suco_maracuja.png", 
             title: "Suco de maracujá", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "13,90"
+            price: "13,90",
+            isFavorite: "false"
           }}/>
           <PlateCard isAdmin={isAdmin} data={{
             id: "9", 
             image: "../../../src/assets/drink.png", 
             title: "Drink", 
             description: "Massa fresca com camarões e pesto.", 
-            price: "25,90"
+            price: "25,90",
+            isFavorite: "false"
           }}/>
         </Dishes>
       </Box>
