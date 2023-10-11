@@ -19,10 +19,14 @@ export function Home({ isAdmin = false }) {
       <Header isAdmin={isAdmin} onOpenMenu={() => setMenuIsOpen(true)}/>
       <Banner>
         {/* TODO: Alterar o banner, não está da maneira correta. */}
-        <img src="../../../src/assets/banner_home.png" alt="" />
-        <div className="text">
-          <h2>Sabores inigualáveis</h2>
-          <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
+        <figure>
+          <img src="../../../src/assets/banner_home.png" alt="" />
+        </figure>
+        <div className="wrapper">
+          <div className="content">
+            <h2>Sabores inigualáveis</h2>
+            <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
+          </div>
         </div>
       </Banner>
       <Box>
