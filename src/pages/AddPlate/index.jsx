@@ -40,20 +40,28 @@ export function AddPlate() {
               name="name"
               title="Nome"
             />
-            {/* <Select title="Categoria" options={[
-              {id: "1", name: "Refeições"},
-              {id: "2", name: "Pratos principais"},
-              {id: "3", name: "Bebidas"},
+            <Select title="Categoria" options={[
+              {id: "1", label: "Refeições"},
+              {id: "2", label: "Pratos principais"},
+              {id: "3", label: "Bebidas"},
               ]}
-              onSelect={setCategory}
-            /> */}
-            <Select title="Categoria"/>
+            />
           </div>
           
           <div className="box-inputs">
             <Ingredients>
-              <PlateItem value="Pão Naan"/>
-              <PlateItem placeholder="Adicionar" isNew/>
+              <PlateItem
+                key="1" 
+                value="Pão Naan"
+                onClick={() => console.log("Removendo ingrediente")}
+                // style={{ width: `${Ingredient.length / 1.15}rem`}}
+              />
+              <PlateItem 
+                placeholder="Adicionar" 
+                isNew
+                onClick={() => console.log("Adicionando ingrediente")}
+                // style={{ width: `${Ingredient.length / 1.15}rem`}}
+              />
             </Ingredients>
             <Input
               placeholder="R$ 00,00"
