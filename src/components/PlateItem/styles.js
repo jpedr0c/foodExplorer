@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 20rem;
-  width: 100%;
+  width: fit-content;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: .8rem;
   background-color: ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.LIGHT_600};
   border: ${({ theme, isNew }) => isNew ? `2px dashed ${theme.COLORS.LIGHT_500}` : "none"};
@@ -12,7 +12,8 @@ export const Container = styled.div`
   padding: .6rem 1.2rem;
 
   > input {
-    width: 100%;
+    min-width: 6.7rem;
+    max-width: 23rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
     background: transparent;
     border: none;
