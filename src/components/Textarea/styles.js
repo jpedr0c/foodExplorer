@@ -22,7 +22,7 @@ export const Text = styled.textarea`
   border-radius: .8rem;
   font-family: "Roboto", sans-serif;
   background-color: ${({ theme }) => theme.COLORS.DARK_900};
-  color: ${({ theme }) => theme.COLORS.LIGHT_500};
+  color: ${({ theme }) => theme.COLORS.LIGHT_400};
 
   &::placeholder {
     color: ${({ theme }) => theme.COLORS.LIGHT_500};
