@@ -68,7 +68,6 @@ export const Options = styled.div`
     font-family: "Poppins", sans-serif;
     font-size: 2.4rem;
     padding: 1rem;
-    /* line-height: 140%; */
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000};
   }
 `;
