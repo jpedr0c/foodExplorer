@@ -6,6 +6,7 @@ import { Footer } from "../../components/Footer";
 import { BackButton } from "../../components/BackButton";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
+import { PriceInput } from "../../components/PriceInput";
 import { Textarea } from "../../components/Textarea";
 import { InputFile } from "../../components/InputFile";
 import { Select } from "../../components/Select";
@@ -14,7 +15,20 @@ import { Ingredients } from "../../components/Ingredients";
 
 export function AddPlate() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const [category, setCategory] = useState("");
+  // const [category, setCategory] = useState("");
+  const [ingredients, setIngredients] = useState([]);
+  const [newIngredient, setNewIngredient] = useState("");
+
+  function handleNewIngredient() {
+    if (!newIngredient)
+      return;
+    setIngredients((prevIngredients) => [...prevIngredients , newIngredient]);
+    setNewIngredient("");
+  }
+
+  function handleRemoveIngredient(ingredient) {
+    setIngredients((prevIngredients) => prevIngredients.filter((item) => item !== ingredient));
+  }
 
   return(
     <Container>
@@ -50,24 +64,27 @@ export function AddPlate() {
           
           <div className="box-inputs">
             <Ingredients>
-              <PlateItem
-                key="1" 
-                value="Pão Naan"
-                onClick={() => console.log("Removendo ingrediente")}
-                // style={{ width: `${Ingredient.length / 1.15}rem`}}
-              />
+              {ingredients.map((ingredient, id) => (
+                <PlateItem
+                  key={id} 
+                  value={ingredient}
+                  onClick={() => handleRemoveIngredient(ingredient)}
+                  style={{ width: `${ingredient.length / 1.15}rem`}}
+                />
+              ))}
               <PlateItem 
-                placeholder="Adicionar" 
                 isNew
-                onClick={() => console.log("Adicionando ingrediente")}
-                // style={{ width: `${Ingredient.length / 1.15}rem`}}
+                placeholder="Adicionar"
+                value={newIngredient}
+                onChange={(e) => setNewIngredient(e.target.value)}
+                onClick={handleNewIngredient}
+                style={{ width: `${newIngredient.length / 1.15}rem`}}
               />
             </Ingredients>
-            <Input
-              placeholder="R$ 00,00"
-              type="text"
-              name="price"
+            <PriceInput
+              className="price-input" 
               title="Preço"
+              placeholder="R$ 00,00"
             />
           </div>
           
