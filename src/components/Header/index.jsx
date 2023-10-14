@@ -3,22 +3,19 @@ import { Container, Menu, Logo, Box, BtnSignOut, Cart } from "./styles";
 import { Link } from "react-router-dom";
 import { Search } from "../Search";
 import { Button } from "../Button";
-
 export function Header({ isAdmin = false, onOpenMenu, orders = "0" }) {
-  return(
-    <Container
-      isAdmin={isAdmin}
-    >
+ return(
+    <Container>
       <Box>
         <Menu onClick={onOpenMenu}>
           <List/>
         </Menu>
         <Logo to="/">
-            <img src="../../../src/assets/polygon.svg" alt="" />
-            <div className="text">
-              <h1>food explorer</h1>
-              { isAdmin && <span>admin</span>}
-            </div>
+          <img src="../../../src/assets/polygon.svg" alt="" />
+          <div className="text">
+            <h1>food explorer</h1>
+            { isAdmin && <span>admin</span> }
+          </div>
         </Logo>
         <Search className="desktop" placeholder="Busque por pratos ou ingredientes"/>
         <Link to={isAdmin ? "/new" : ""} className="desktop">
@@ -33,7 +30,6 @@ export function Header({ isAdmin = false, onOpenMenu, orders = "0" }) {
           <span>{orders}</span>
         </Cart>}
       </Box>
-      
     </Container>
-  );
+ );
 }
