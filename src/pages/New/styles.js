@@ -60,19 +60,23 @@ export const Form = styled.form`
 `;
 
 export const Actions = styled.div`
-  > button:nth-child(1) {
+  > .cancel {
     display: none;
-    background-color: ${({ theme }) => theme.COLORS.DARK_800};
   }
-
   
   @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
     display: flex;
     justify-content: flex-end;
     gap: 3.2rem;
     
-    > button:nth-child(1) {
+    > .cancel {
       display: flex;
+      width: 100%;
+      max-width: 15rem;
+
+      button {
+        background-color: ${({ theme }) => theme.COLORS.DARK_800};
+      }
     }
     
     > button {

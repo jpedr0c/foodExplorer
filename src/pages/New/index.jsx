@@ -12,8 +12,9 @@ import { InputFile } from "../../components/InputFile";
 import { Select } from "../../components/Select";
 import { PlateItem } from "../../components/PlateItem";
 import { Ingredients } from "../../components/Ingredients";
+import { Link } from "react-router-dom";
 
-export function AddPlate() {
+export function New() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   // const [category, setCategory] = useState("");
   const [ingredients, setIngredients] = useState([]);
@@ -82,7 +83,6 @@ export function AddPlate() {
               />
             </Ingredients>
             <PriceInput
-              className="price-input" 
               title="Preço"
               placeholder="R$ 00,00"
             />
@@ -93,7 +93,9 @@ export function AddPlate() {
             placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
           />
           <Actions>
-            <Button title="Cancelar"/>
+            <Link to="/" className="cancel">
+              <Button title="Cancelar"/>
+            </Link>
             <Button title="Adicionar prato"/>
           </Actions>
         </Form>
