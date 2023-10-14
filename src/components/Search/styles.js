@@ -37,7 +37,7 @@ export const BoxInput = styled.div`
   > input {
     width: 100%;
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
-    color: ${({ theme }) => theme.COLORS.LIGHT_500};
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
     border: none;
