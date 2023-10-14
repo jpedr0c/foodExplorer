@@ -21,6 +21,7 @@ export const Text = styled.textarea`
   padding: 1.4rem;
   border-radius: .8rem;
   font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_900};
   color: ${({ theme }) => theme.COLORS.LIGHT_400};
 
