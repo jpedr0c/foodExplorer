@@ -18,7 +18,6 @@ export function Home({ isAdmin = false }) {
       />
       <Header isAdmin={isAdmin} onOpenMenu={() => setMenuIsOpen(true)}/>
       <Banner>
-        {/* TODO: Alterar o banner, não está da maneira correta. */}
         <figure>
           <img src="../../../src/assets/banner_home.png" alt="" />
         </figure>
@@ -30,85 +29,151 @@ export function Home({ isAdmin = false }) {
         </div>
       </Banner>
       <Box>
-        <Dishes title="Refeições">
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "1", 
-            image: "../../../src/assets/salada_ravanello.png", 
-            title: "Salada Ravanello", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "49,90",
-            isFavorite: "false"
-          }}/>
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "2", 
-            image: "../../../src/assets/spaguetti_gambe.png", 
-            title: "Spaguetti Gambe", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "79,90",
-            isFavorite: "false"
-          }}/>
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "3", 
-            image: "../../../src/assets/torradas_parma.png", 
-            title: "Torradas de Parma", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "25,90",
-            isFavorite: "false"
-          }}/>
+        <Dishes 
+          title="Refeições"
+          dishes={[
+            {
+              id: "1",
+              title: "Salada Ravanello",
+              description: "Massa fresca com camarões e pesto",
+              price: "49,90",
+              image: "../../../src/assets/salada_ravanello.png"
+            },
+            {
+              id: "2", 
+              title: "Spaguetti Gambe", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "79,90",
+              image: "../../../src/assets/spaguetti_gambe.png"
+            },
+            {
+              id: "3", 
+              title: "Torradas de Parma", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "25,90",
+              image: "../../../src/assets/torradas_parma.png"
+            },
+            {
+              id: "4",
+              title: "Salada Ravanello",
+              description: "Massa fresca com camarões e pesto",
+              price: "49,90",
+              image: "../../../src/assets/salada_ravanello.png"
+            },
+            {
+              id: "5", 
+              title: "Spaguetti Gambe", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "79,90",
+              image: "../../../src/assets/spaguetti_gambe.png"
+            },
+            {
+              id: "6", 
+              title: "Torradas de Parma", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "25,90",
+              image: "../../../src/assets/torradas_parma.png"
+            }
+          ]}
+        >
         </Dishes>
 
-        <Dishes title="Pratos principais">
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "4", 
-            image: "../../../src/assets/salada_ravanello.png", 
-            title: "Salada Ravanello", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "49,90",
-            isFavorite: "false"
-          }}/>
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "5", 
-            image: "../../../src/assets/spaguetti_gambe.png", 
-            title: "Spaguetti Gambe", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "79,90",
-            isFavorite: "false"
-          }}/>
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "6", 
-            image: "../../../src/assets/torradas_parma.png", 
-            title: "Torradas de Parma", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "25,90",
-            isFavorite: "false"
-          }}/>
+        <Dishes 
+          title="Pratos principais"
+          dishes={[
+            {
+              id: "7", 
+              title: "Salada Ravanello", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "49,90",
+              image: "../../../src/assets/salada_ravanello.png"
+            },
+            {
+              id: "8", 
+              title: "Spaguetti Gambe", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "79,90",
+              image: "../../../src/assets/spaguetti_gambe.png"
+            },
+            {
+              id: "9", 
+              title: "Torradas de Parma", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "25,90",
+              image: "../../../src/assets/torradas_parma.png"
+            },
+            {
+              id: "10", 
+              title: "Salada Ravanello", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "49,90",
+              image: "../../../src/assets/salada_ravanello.png"
+            },
+            {
+              id: "11", 
+              title: "Spaguetti Gambe", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "79,90",
+              image: "../../../src/assets/spaguetti_gambe.png"
+            },
+            {
+              id: "12", 
+              title: "Torradas de Parma", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "25,90",
+              image: "../../../src/assets/torradas_parma.png"
+            },
+          ]}
+        >
         </Dishes>
 
-        <Dishes title="Bebidas">
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "7", 
-            image: "../../../src/assets/expresso.png", 
-            title: "Expresso", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "15,90",
-            isFavorite: "false"
-          }}/>
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "8", 
-            image: "../../../src/assets/suco_maracuja.png", 
-            title: "Suco de maracujá", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "13,90",
-            isFavorite: "false"
-          }}/>
-          <PlateCard isAdmin={isAdmin} data={{
-            id: "9", 
-            image: "../../../src/assets/drink.png", 
-            title: "Drink", 
-            description: "Massa fresca com camarões e pesto.", 
-            price: "25,90",
-            isFavorite: "false"
-          }}/>
+        <Dishes 
+          title="Bebidas"
+          dishes={[
+            {
+              id: "13", 
+              title: "Expresso", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "15,90",
+              image: "../../../src/assets/expresso.png"
+            },
+            {
+              id: "14", 
+              title: "Suco de maracujá", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "13,90",
+              image: "../../../src/assets/suco_maracuja.png"
+            },
+            {
+              id: "15", 
+              title: "Drink", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "25,90",
+              image: "../../../src/assets/drink.png"
+            },
+            {
+              id: "16", 
+              title: "Expresso", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "15,90",
+              image: "../../../src/assets/expresso.png"
+            },
+            {
+              id: "17", 
+              title: "Suco de maracujá", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "13,90",
+              image: "../../../src/assets/suco_maracuja.png"
+            },
+            {
+              id: "18", 
+              title: "Drink", 
+              description: "Massa fresca com camarões e pesto.", 
+              price: "25,90",
+              image: "../../../src/assets/drink.png"
+            },
+          ]}
+        >
         </Dishes>
       </Box>
       <Footer/>
