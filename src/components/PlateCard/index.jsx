@@ -6,14 +6,14 @@ import { Container, ButtonTop, Actions } from "./styles";
 import { Button } from "../Button";
 import { Stepper } from "../Stepper";
 
-export function PlateCard({ data, isAdmin = false }) {
+export function PlateCard({ isAdmin = false, id, title, description, price, image }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);
   };
 
-  data.isFavorite = toggleFavorite;
+  // data.isFavorite = toggleFavorite;
 
   return (
     <Container
@@ -31,11 +31,11 @@ export function PlateCard({ data, isAdmin = false }) {
         </ButtonTop>
       )}
       <Link to="/details/1" className="clickable">
-        <img src={data.image} alt="" /> 
-        <h4>{data.title}</h4>
+        <img src={image} alt="" /> 
+        <h4>{title}</h4>
       </Link>
-      <span>{data.description}</span>
-      <p>R$ {data.price}</p>
+      <span>{description}</span>
+      <p>R$ {price}</p>
 
       <Actions>
         <Stepper />
