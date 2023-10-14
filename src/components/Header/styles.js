@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
@@ -8,7 +9,6 @@ export const Container = styled.header`
   width: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: ${({ $isadmin }) => $isadmin ? "start" : "space-between"}; */
   padding: 2.4rem 2.5rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_700};
 `;
@@ -27,12 +27,12 @@ export const Box = styled.div`
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     gap: 3rem;
     
-    > button.desktop{
-      max-width: 18rem;
-    }
-
     .desktop {
       display: flex;
+    }
+
+    .desktop > button {
+      width: 17rem;
     }
   }
 
@@ -55,7 +55,7 @@ export const Menu = styled.button`
   }
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(Link)`
   width: 100%;
   max-width: 17rem;
   display: flex;

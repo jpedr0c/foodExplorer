@@ -97,6 +97,10 @@ export const Actions = styled.div`
   width: 100%;
   margin-top: 4.8rem;
 
+  > .edit-button {
+    width: 100%;
+  }
+
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     width: ${({ isAdmin }) => isAdmin ? "40%" : "100%"};
   }

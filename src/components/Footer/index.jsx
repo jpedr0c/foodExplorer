@@ -4,7 +4,7 @@ export function Footer() {
   return(
     <Container>
       <Box>
-        <Logo href="/">
+        <Logo to="/">
             <img src="../../../src/assets/polygon_gray.svg" alt="" />
             <h1>food explorer</h1>
         </Logo>

@@ -52,6 +52,11 @@ export const Nav = styled.nav`
   flex: 1;
   gap: 3.6rem;
   padding: 2rem 2.8rem;
+
+  > .search {
+    width: 100%;
+    max-width: none;
+  }
 `;
 
 export const Options = styled.div`

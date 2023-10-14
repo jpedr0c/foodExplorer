@@ -1,6 +1,7 @@
-import { X ,MagnifyingGlass } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
+import { X } from "@phosphor-icons/react";
 import { Container, BtnClose, Nav, Options } from "./styles";
-import { Input } from "../Input";
+import { Search } from "../Search";
 import { Footer } from "../Footer";
 
 export function MenuMobal({ isAdmin = false, menuIsOpen, onCloseMenu }) {
@@ -13,12 +14,12 @@ export function MenuMobal({ isAdmin = false, menuIsOpen, onCloseMenu }) {
         <h2>Menu</h2>
       </header>
       <Nav>
-        <Input icon={MagnifyingGlass} placeholder="Busque por pratos ou ingredientes"/>
+        <Search className="search" placeholder="Busque por pratos ou ingredientes"/>
         <Options>
           {isAdmin && 
-            <a href="/">Novo prato</a>
+            <Link to="/new">Novo prato</Link>
           }
-          <a href="/">Sair</a>
+          <Link to="/">Sair</Link>
         </Options>
       </Nav>
       <Footer/>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
@@ -29,7 +30,7 @@ export const Box = styled.div`
   }
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(Link)`
   display: flex;
   align-items: center;
   gap: .8rem;

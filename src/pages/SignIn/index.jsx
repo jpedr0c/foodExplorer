@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Container, Logo, Form } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -5,7 +6,7 @@ import { Button } from "../../components/Button";
 export function SignIn() {
   return(
     <Container>
-      <Logo href="/">
+      <Logo to="/">
           <img src="../../../src/assets/polygon.svg" alt="" />
           <h1>food explorer</h1>
       </Logo>
@@ -24,7 +25,7 @@ export function SignIn() {
           title="Senha"
         />
         <Button title="Entrar"/>
-        <a href="/">Criar uma conta</a>
+        <Link to="/register">Criar uma conta</Link>
       </Form>
     </Container>
   );

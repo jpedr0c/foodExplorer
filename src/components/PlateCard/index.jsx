@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 import { Pencil } from "@phosphor-icons/react";
 import { Container, ButtonTop, Actions } from "./styles";
@@ -20,15 +21,19 @@ export function PlateCard({ data, isAdmin = false }) {
     >
       {isAdmin ? (
         <ButtonTop>
-          <Pencil />
+          <Link to="/edit/1" className="pencil">
+            <Pencil />
+          </Link>
         </ButtonTop>
       ) : (
         <ButtonTop onClick={toggleFavorite}>
           {isFavorite ? <AiFillHeart className="colored"/> : <AiOutlineHeart/>}
         </ButtonTop>
       )}
-      <img src={data.image} alt="" />
-      <h4>{data.title}</h4>
+      <Link to="/details/1" className="clickable">
+        <img src={data.image} alt="" /> 
+        <h4>{data.title}</h4>
+      </Link>
       <span>{data.description}</span>
       <p>R$ {data.price}</p>
 

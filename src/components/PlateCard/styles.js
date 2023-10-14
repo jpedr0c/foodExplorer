@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
@@ -15,26 +16,36 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.DARK_200};
   border-radius: 1rem;
 
-  > img {
-    width: 10rem;
-    height: 10rem;
-    cursor: pointer;
+  > .clickable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    img {
+      width: 10rem;
+      height: 10rem;
+      cursor: pointer;
+    }
+  
+    h4 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: ${({ theme }) => theme.COLORS.LIGHT_300};
+      cursor: pointer;
+      text-align: center;
+    }
   }
 
-  > h4 {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-align: center;
-  }
 
   > span {
     display: none;
     color: ${({ theme }) => theme.COLORS.LIGHT_400};
     text-align: center;
     font-family: "Roboto", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2.2rem;
   }
 
@@ -53,19 +64,41 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.MD}){
+    > .clickable {
+      img {
+        width: 11rem;
+        height: 11rem;
+      }
+  
+      h4 {
+        font-size: 1.6rem;
+      }
+    }
+
     > span {
       display: block;
+      font-size: 1.1rem;
+    }
+
+    > p {
+      font-size: 1.8rem;
     }
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}){
-    > img {
-      width: 12rem;
-      height: 12rem;
+    > .clickable {
+      img {
+        width: 12rem;
+        height: 12rem;
+      }
+  
+      h4 {
+        font-size: 1.8rem;
+      }
     }
 
-    > h4 {
-      font-size: 1.8rem;
+    > span {
+      font-size: 1.2rem;
     }
 
     > p {
@@ -83,6 +116,10 @@ export const ButtonTop = styled.button`
   right: 1.6rem;
   font-size: 2.4rem;
   cursor: pointer;
+
+  > .pencil > svg {
+    color: ${({ theme }) => theme.COLORS.LIGHT_300};
+  }
   
   > svg.colored {
     color: ${({ theme }) => theme.COLORS.TOMATO_300};

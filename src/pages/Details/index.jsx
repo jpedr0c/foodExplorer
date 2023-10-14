@@ -8,6 +8,7 @@ import { Tags } from '../../components/Tags';
 import { Stepper } from '../../components/Stepper';
 import { Button } from '../../components/Button';
 import { Footer } from '../../components/Footer';
+import { Link } from "react-router-dom";
 
 
 export function Details({ isAdmin = false }) {
@@ -39,12 +40,14 @@ export function Details({ isAdmin = false }) {
 
             {isAdmin ? 
               <Actions isAdmin={isAdmin}>
-                <Button title={isAdmin ? "Editar prato" : "pedir ∙ R$ 25,00"} icon={Receipt}/>
+                <Link to="/edit/1" className="edit-button">
+                  <Button title="Editar prato" icon={Receipt}/>
+                </Link>
               </Actions>
               :
               <Actions isAdmin={isAdmin}>
                 <Stepper/>
-                <Button title={isAdmin ? "Editar prato" : "pedir ∙ R$ 25,00"} icon={Receipt}/>
+                <Button title="pedir ∙ R$ 25,00" icon={Receipt}/>
               </Actions>
             }
           </Info>
