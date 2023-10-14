@@ -72,7 +72,7 @@ export const Container = styled.div`
     max-height: 0;
     width: calc(100% + 2px);
     position: absolute;
-    top: 8rem;
+    top: 7.8rem;
     left: -1px;
     margin-top: .4rem;
     border-radius: .5rem;
@@ -88,7 +88,6 @@ export const Container = styled.div`
     gap: .8rem;
     padding: 1.2rem;
     width: 100%;
-    /* border-bottom: 1px solid ${({ theme }) => theme.COLORS.LIGHT_700}; */
   }
 
   .option .label {
@@ -133,5 +132,4 @@ export const Container = styled.div`
       visibility: visible;
     }
   }
-
 `;
